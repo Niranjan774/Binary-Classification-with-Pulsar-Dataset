@@ -1,0 +1,72 @@
+<html>
+<head>
+
+
+<title> Python app </title>
+<style >
+
+form{
+  text-align: center;
+}
+input[type=Submit]{
+  background-color: green;
+  color: white;
+  width: 80px
+}
+select{
+  width: 100%
+}
+label{
+  font-size: 20px;
+  display :inline-block;
+  width :300px;
+  text-align: right;
+}
+</style>
+</head>
+
+<body>
+
+<center><h1> Pulsar Classification </h1></center>
+<center><h2> Classification: {{results}}</h2></center>
+<form method="POST", action = "{{url_for('predict')}}" >
+
+<label for="Mean_Integrated"> Mean Integrated </label>
+<input type="number" id="Mean_Integrated" name="ab" required = 'required' placeholder="Enter Mean Integrated"></input>
+<br></br>
+
+<label for="SD"> S D </label>
+<input type="number" id="SD" name="sd" required = 'required'  placeholder="Enter SD"></input>
+<br></br>
+
+<label for="EK"> KE </label>
+<input type="number" id="EK" name="cd" required = 'required'  placeholder="Enter KE"></input>
+<br></br>
+
+<label for="Skewness"> Skewness </label>
+<input type="number" id="Skewness" name="ad" required = 'required'   placeholder="Enter skewness"></input>
+<br></br>
+
+<label for="Mean_DMSNR_Curve"> Mean_DMSNR_Curve </label>
+<input type="number" id="Mean_DMSNR_Curve" name="ed" required = 'required'  placeholder="Enter value of Mean_DMSNR_Curve"></input>
+<br></br>
+
+<label for="SD_DMSNR_Curve"> SD_DMSNR_Curve </label>
+<input type="number" id="SD_DMSNR_Curve"  name="fd",required = 'required'  placeholder="Enter value of SD_DMSNR_Curve"></input>
+<br></br>
+
+<label for="EK_DMSNR_Curve"> EK_DMSNR_Curve </label>
+<input type="number" id="EK_DMSNR_Curve" name="gd"  required = 'required' placeholder="Enter value of EK_DMSNR_Curve"></input>
+<br></br>
+
+<label for="Skewness_DMSNR_Curve"> Skewness_DMSNR_Curve</label>
+<input type="text" id="Skewness_DMSNR_Curve"  name="hd" required = 'required'   placeholder="Enter value of Skewness_DMSNR_Curve"></input>
+<br></br>
+
+<input  type = "SUBMIT" for="predict" ></input>
+
+</form>
+</body>
+
+
+</html>
